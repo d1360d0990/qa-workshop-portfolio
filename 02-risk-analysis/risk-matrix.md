@@ -1,10 +1,10 @@
 # Risk Matrix
 
-| ID  |Riesgo|Impacto|Probabilidad|Nivel|Mitigación| Justificación|
-|-----|------|-------|------------|-----|--------------| -------------|
-| R1  | El usuario no puede completar el proceso de checkout       |    5    |        5     |   25    |Se deben realizar pruebas E2E del checkout, pruebas exploratorias del flujo completo y monitoreo en producción|  Nivel crítico porque impacta directamente en las ventas y ocurre en un flujo complejo. |
-| R2  | El sistema permite ingresar cantidades extremadamente grandes en el carrito|    5    |        3     |   15    | Se deben realizar pruebas de valores límite (BVA), pruebas negativas y validaciones en backend|Nivel alto por impacto en cálculos e inventario|
-| R3  | El sistema permite registrar usuarios con datos inválidos  |    3    |        5     |   15    |Se deben realizar pruebas de validación de formularios, pruebas negativas y pruebas de API|Nivel alto por alta probabilidad y afectación a la calidad de datos|
-| R4  | El sistema muestra productos sin stock disponible          |    3    |        3     |    9    |Se deben realizar pruebas de integración con inventario y pruebas de flujo de compra|Nivel medio porque afecta la experiencia pero no rompe el sistema|
-| R5  | La aplicación presenta errores del servidor (500)          |    5    |        3     |   15    |Se deben realizar pruebas de integración, pruebas de estrés y validación de manejo de errores|Nivel alto por impacto en la estabilidad del sistema|
-| R6 | El producto muestra imágenes que no corresponden al producto ofrecido | 3 | 3 | 9 |Se deben realizar pruebas de consistencia de datos, pruebas visuales y validación del catálogo| Nivel medio porque afecta la experiencia del usuario. Las imágenes incorrectas pueden confundir al usuario y afectar la confianza en la tienda |
+| ID  |Riesgo|Impacto|Probabilidad|Nivel| Justificación|
+|-----|------|-------|------------|-----|--------------|
+| R1  | El usuario no puede completar el proceso de checkout       |    5    |        5     |   25    | El checkout es la funcionalidad principal para generar ventas en el sistema. |
+| R2  | El sistema permite ingresar cantidades extremadamente grandes en el carrito|    5    |        3     |   15    | Cantidades excesivas pueden provocar errores en cálculos de precio, inventario o procesamiento de pedidos|
+| R3  | El sistema permite registrar usuarios con datos inválidos  |    3    |        5     |   15    | Datos incorrectos afectan la calidad de la base de datos y comunicación      |
+| R4  | El sistema muestra productos sin stock disponible          |    3    |        3     |    9    | Puede generar frustración en los usuarios al intentar comprar un producto    |
+| R5  | La aplicación presenta errores del servidor (500)          |    5    |        3     |   15    | Los errores del servidor afectan la confiabilidad del sistema                |
+| R6 | El producto muestra imágenes que no corresponden al producto ofrecido | 3 | 3 | 9 | Las imágenes incorrectas pueden confundir al usuario y afectar la confianza en la tienda |
